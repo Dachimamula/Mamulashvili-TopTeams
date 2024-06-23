@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<p>egia cxovreba?</p>
+    {% for i in range(10) %}
+        {% if i%2==0 %}
+           <p>{{ i }}</p>
+        {% endif %}
+    {% endfor %}
+    <h2>me var aqaurobis mefe da icode eg!!!</h2>
+{% endblock %}
+
+{% block title %}
+    <title>Admin</title>
+{% endblock %}

@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+    <title>My Page</title>
+{% endblock %}
+
+{% block content %}
+<h4 style="margin: 10px">It is your page {{ session['username'] }}.</h4>
+<h3 style="margin: 10px">These are top football players in your country:</h3>
+{% for i in footballers %}
+    <p style="margin: 10px">Player: {{ i }}</p>
+    {% if i=='Mamardashvili' %}
+        <p>N1</p>
+    <img src="static/img/images.jgp">
+    {% elif i=="Kvaratskhelia" %}
+        <p>N2</p>
+    {% elif i=="Zivzivadze" %}
+        <p>N3</p>
+    {% elif i=="Miqautadze" %}
+        <p>N4</p>
+    {% else %}
+        <p>N5</p>
+    {% endif %}
+{% endfor %}
+{% endblock %}

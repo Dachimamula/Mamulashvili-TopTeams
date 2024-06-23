@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+    <title>Add Teams</title>
+{% endblock %}
+
+{% block content %}
+<br>
+    <form method="get" style="width:50%; margin-left: 10px">
+      <div style="width: 50%" class="form-group">
+        <h3>Add Teams</h3>
+        <input type="text" name="team" class="form-control" placeholder="Team"><br>
+        <input type="text" name="goals" class="form-control" placeholder="Goals"><br>
+        <input type="text" name="rating" class="form-control"  placeholder="Rating"><br>
+      </div>
+    <button type="submit" class="btn btn-primary">Add Team</button>
+    </form>
+{% with messages = get_flashed_messages()%}
+    {% for m in message %}
+    <p>{{m}}</p>
+    {% endfor %}
+{% endwith %}
+{% endblock %}
